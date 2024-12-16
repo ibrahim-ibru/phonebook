@@ -1,6 +1,6 @@
 async function getContacts() {
     try {
-        const res= await fetch("http://localhost:3000/getdata",{
+        const res= await fetch("http://localhost:3000/api/getdata",{
             method:"GET",
             headers:{"Content--type":"applicatiion/json"}
         })
@@ -29,7 +29,7 @@ getContacts()
 async function handleEdit(_id) {
     const name=prompt("Edit name :")
     const phone=prompt("Edit phone :")
-    const res=await fetch(`http://localhost:3000/update/${_id}`,{
+    const res=await fetch(`http://localhost:3000/api/update/${_id}`,{
         method:"PUT",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify({name,phone})
@@ -42,7 +42,7 @@ async function handleEdit(_id) {
 }
 
 async function handleDelete(_id) {
-    const res=await fetch(`http://localhost:3000/delete/${_id}`,{
+    const res=await fetch(`http://localhost:3000/api/delete/${_id}`,{
         method:"DELETE",
         headers:{"Content-Type":"application/json"},
     })

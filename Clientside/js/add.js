@@ -5,7 +5,7 @@ document.getElementById("new-contact").addEventListener("submit",async(ev)=>{
     phone=document.getElementById("phone").value
     console.log(name,"==",phone);
 
-    const res=await fetch("http://localhost:3000/add",{
+    const res=await fetch("http://localhost:3000/api/add",{
         method:"POST",
         headers:{"Content-type":"application/json"},
         body:JSON.stringify({name,phone})
