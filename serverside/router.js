@@ -7,7 +7,7 @@ const router=Router()
 
 router.route("/add").post(ctrl.addPhone)
 router.route("/getdata").get(ctrl.getData)
-router.route("/deletedata/:_id").delete(ctrl.deleteData)
+router.route("/delete/:_id").delete(ctrl.deleteData)
 router.route("/update/:_id").put(ctrl.updateData)
 
 export default router
